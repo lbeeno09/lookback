@@ -1,0 +1,10 @@
+[submodule "deps/glfw"]
+	path = deps/glfw
+	url = https://github.com/glfw/glfw
+[submodule "deps/imgui"]
+	path = deps/imgui
+	url = https://github.com/ocornut/imgui
+	branch = docking
+[submodule "deps/mupdf"]
+	path = deps/mupdf
+	url = https://github.com/ArtifexSoftware/mupdf
