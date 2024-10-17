@@ -1,6 +1,6 @@
 #include "App.h"
 
-App::App()
+App::App() : showDemoWindow_(false), PDFViewer_({}), Storage_({})
 {
 
 }
@@ -14,6 +14,7 @@ void App::Init()
 {
 	// Our state
 	bool showDemoWindow = false;
+	Storage_.Init();
 	PDFViewer_.Init("autofoley.pdf");
 }
 

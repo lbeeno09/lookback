@@ -1,5 +1,6 @@
 #include "AppBase.h"
 #include "PDFViewer.h"
+#include "Storage.h"
 
 class App : public AppBase
 {
@@ -14,4 +15,5 @@ private:
 
 	bool showDemoWindow_;
 	PDFViewer PDFViewer_;
+	Storage Storage_;
 };
