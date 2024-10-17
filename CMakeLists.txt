@@ -23,6 +23,9 @@ set(IMGUI_BACKENDS_DIR ${IMGUI_SOURCE_DIR}/backends)
 set(MUPDF_INCLUDE_DIR ${DEPS_DIR}/mupdf/include)
 set(MUPDF_LIB_DIR ${DEPS_DIR}/mupdf/platform/win32/x64/$<CONFIG>)
 
+# nlohmann-json
+set(JSON_INCLUDE_DIR ${DEPS_DIR}/json/include)
+
 # Add source/header files for the app
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 include_directories(include)
@@ -37,6 +40,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 	${IMGUI_SOURCE_DIR}
 	${IMGUI_BACKENDS_DIR}
 	${MUPDF_INCLUDE_DIR}
+	${JSON_INCLUDE_DIR}
 )
 
 # Set Lib Directories
