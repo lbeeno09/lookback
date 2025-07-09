@@ -1,10 +1,14 @@
-#include "App.h"
+#include "Application.h"
+#include "Graphics.h"
 
-int main(int, char **)
+int main()
 {
-	App app;
-
-	app.Run();
+	Application app;
+	if(app.Initialize(GraphicsRenderer::GraphicsAPI::OpenGL))
+	{
+		app.Run();
+	}
+	app.Shutdown();
 
 	return 0;
 }
