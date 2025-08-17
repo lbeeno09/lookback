@@ -1,13 +1,13 @@
-[submodule "deps/glfw"]
-	path = deps/glfw
+[submodule "vendors/glfw"]
+	path = vendors/glfw
 	url = https://github.com/glfw/glfw
-[submodule "deps/imgui"]
-	path = deps/imgui
+[submodule "vendors/imgui"]
+	path = vendors/imgui
 	url = https://github.com/ocornut/imgui
 	branch = docking
-[submodule "deps/mupdf"]
-	path = deps/mupdf
+[submodule "vendors/mupdf"]
+	path = vendors/mupdf
 	url = https://github.com/ArtifexSoftware/mupdf
-[submodule "deps/json"]
-	path = deps/json
+[submodule "vendors/json"]
+	path = vendors/json
 	url = https://github.com/nlohmann/json
