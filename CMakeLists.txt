@@ -6,14 +6,14 @@ project(${PROJECT_NAME} VERSION 1.0)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-set(DEPS_DIR ${CMAKE_SOURCE_DIR}/deps)
+set(DEPS_DIR ${CMAKE_SOURCE_DIR}/vendors)
 
 # integrable modules
 find_package(OpenGL REQUIRED)
 
 # GLFW
 set(GLFW_INCLUDE_DIR ${DEPS_DIR}/glfw/include)
-set(GLFW_LIB_DIR ${DEPS_DIR}/glfw/build/src/$<CONFIG>)
+set(GLFW_LIB_DIR ${DEPS_DIR}/glfw/build/src/Release)
 
 # imgui
 set(IMGUI_SOURCE_DIR ${DEPS_DIR}/imgui)
@@ -21,7 +21,7 @@ set(IMGUI_BACKENDS_DIR ${IMGUI_SOURCE_DIR}/backends)
 
 # mupdf
 set(MUPDF_INCLUDE_DIR ${DEPS_DIR}/mupdf/include)
-set(MUPDF_LIB_DIR ${DEPS_DIR}/mupdf/platform/win32/x64/$<CONFIG>)
+set(MUPDF_LIB_DIR ${DEPS_DIR}/mupdf/platform/win32/x64/Release)
 
 # nlohmann-json
 set(JSON_INCLUDE_DIR ${DEPS_DIR}/json/include)
@@ -29,7 +29,7 @@ set(JSON_INCLUDE_DIR ${DEPS_DIR}/json/include)
 # Add source/header files for the app
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 include_directories(include)
-# file(GLOB_RECURSE HEADERS "include/*.h")
+file(GLOB_RECURSE HEADERS "include/*.h")
 
 # Add executable
 add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES})
